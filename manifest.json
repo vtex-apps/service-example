@@ -1,13 +1,12 @@
 {
   "name": "service-example",
   "vendor": "vtex",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
-  "dependencies": {
-  },
+  "dependencies": {},
   "builders": {
     "node": "4.x"
   },
