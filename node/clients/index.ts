@@ -6,9 +6,7 @@ const TIMEOUT_MS = 2000
 
 // All IO Clients will be initialized with this options, unless otherwise specified.
 const defaultClientOptions = {
-  retryConfig: {
-    retries: 1,
-  },
+  retries: 1,
   timeout: TIMEOUT_MS,
 }
 
