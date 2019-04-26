@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+- Using new IOClient
+
 ## [0.0.1] - 2019-03-29
 
 ### Added

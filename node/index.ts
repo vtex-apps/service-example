@@ -4,9 +4,9 @@ import './globals'
 import { ClientsConfig, LRUCache, Service, ServiceContext } from '@vtex/api'
 
 import { Clients } from './clients'
-import { method } from './middleware/method'
-import { status } from './middleware/status'
-import { validate } from './middleware/validate'
+import { method } from './middlewares/method'
+import { status } from './middlewares/status'
+import { validate } from './middlewares/validate'
 
 const TIMEOUT_MS = 500
 
