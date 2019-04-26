@@ -1,6 +1,3 @@
-// Import global types
-import './globals'
-
 import { ClientsConfig, LRUCache, Service, ServiceContext } from '@vtex/api'
 
 import { Clients } from './clients'
@@ -8,7 +5,7 @@ import { method } from './middlewares/method'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
 
-const TIMEOUT_MS = 500
+const TIMEOUT_MS = 800
 
 // Create a LRU memory cache for the Status client.
 // The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
