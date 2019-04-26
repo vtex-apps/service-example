@@ -1,11 +1,9 @@
-import { HttpClient, HttpClientFactory, IODataSource, IOResponse } from '@vtex/api'
+import { ExternalClient, InstanceOptions, IOContext, IOResponse } from '@vtex/api'
 
-// Create a HttpClient
-const forStatus: HttpClientFactory = ({context, options}) => context &&
-  HttpClient.forExternal(`http://httpstat.us`, context, options || {} as any)
-
-export default class Status extends IODataSource {
-  protected httpClientFactory = forStatus
+export default class Status extends ExternalClient {
+  constructor(context: IOContext, options?: InstanceOptions) {
+    super('http://httpstat.us', context, options)
+  }
 
   public async getStatus (status: number): Promise<string> {
     return this.http.get(status.toString(), {

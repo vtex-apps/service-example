@@ -5,7 +5,7 @@
   "devDependencies": {
     "@types/node": "8.x",
     "@types/ramda": "types/npm-ramda#dist",
-    "@vtex/api": "3.4.0",
+    "@vtex/api": "3.8.1",
     "tslint": "^5.14.0",
     "tslint-config-vtex": "^2.1.0",
     "typescript": "^3.1.6"
