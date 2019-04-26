@@ -1,5 +1,4 @@
 {
-  "stack": "nodejs",
   "memory": 256,
   "ttl": 10,
   "timeout": 2,
