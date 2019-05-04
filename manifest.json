@@ -27,9 +27,6 @@
     },
     {
       "name": "colossus-write-logs"
-    },
-    {
-      "name": "graphql-query"
     }
   ]
 }
