@@ -6,8 +6,8 @@
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
-  "dependencies": {},
   "builders": {
+    "graphql": "1.x",
     "node": "4.x"
   },
   "scripts": {
@@ -16,17 +16,11 @@
   "credentialType": "absolute",
   "policies": [
     {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "httpstat.us",
-        "path": "*"
-      }
-    },
-    {
       "name": "colossus-fire-event"
     },
     {
       "name": "colossus-write-logs"
     }
-  ]
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

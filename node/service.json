@@ -5,8 +5,8 @@
   "minReplicas": 2,
   "maxReplicas": 4,
   "routes": {
-    "status": {
-      "path": "/_v/status/:code",
+    "test": {
+      "path": "/_v/private/test",
       "public": true
     }
   }

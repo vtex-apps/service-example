@@ -1,0 +1,9 @@
+scalar IOMessage
+
+type Test {
+  message: String
+}
+
+type Query {
+  test: Test @cacheControl(scope: PRIVATE)
+}
