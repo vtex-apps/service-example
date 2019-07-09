@@ -1,0 +1,53 @@
+ab -n 500 -c 50 -H 'Host: guilherme4--boticario.myvtex.com' "http://public.aws-2-us-east-1.ingress.vtex.io/_v/private/test"
+Time taken for tests:   3.822 seconds
+p50 330
+p99 404
+
+ab -n 500 -c 50 "https://guilherme4--boticario.myvtex.com/_v/private/test"
+Time taken for tests:   7.282 seconds
+p50 691
+p99 1007
+
+ab -n 500 -c 50 -H 'Host: guilherme--storecomponents.myvtex.com' "http://public.aws-2-us-east-1.ingress.vtex.io/_v/private/test"
+Time taken for tests:   3.833 seconds
+p50 341
+p99 379
+
+ab -n 500 -c 50 -H 'Host: service-example.vtex.aws-us-east-1.vtex.io' -H 'Authorization: {{token}}' 'http://public.aws-2-us-east-1.ingress.vtex.io/storecomponents/guilherme/_v/graphql?query=query%20%7B%20test%20%7B%20message%20%7D%20%7D'
+Time taken for tests:   3.885 seconds
+p50 333
+p99 436
+
+// Stripped away store-graphql
+ab -n 500 -c 50 -H 'Host: store-graphql.vtex.aws-us-east-1.vtex.io' -H 'Authorization: {{token}}' 'http://public.aws-2-us-east-1.ingress.vtex.io/storecomponents/guilherme/_v/graphql?query=query%20%7B%20product(slug:%20%22egeo-desodorante-colonia-bomb-black-90ml_73530%22)%20%7B%20productId%20productName%20%7D%20%7D'
+Time taken for tests:   3.894 seconds
+p50 350
+p99 392
+
+
+// store-graphql with static product resolver
+ab -n 500 -c 50 -H 'Host: store-graphql.vtex.aws-us-east-1.vtex.io' -H 'Authorization: {{token}}' 'http://public.aws-2-us-east-1.ingress.vtex.io/storecomponents/guilherme/_v/graphql?query=query%20%7B%20product(slug:%20%22egeo-desodorante-colonia-bomb-black-90ml_73530%22)%20%7B%20productId%20productName%20%7D%20%7D'
+Time taken for tests:   12.567 seconds
+p50 1180
+p99 1870
+
+
+// store-graphql without data sources and directives
+ab -n 500 -c 50 -H 'Host: store-graphql.vtex.aws-us-east-1.vtex.io' -H 'Authorization: {{token}}' 'http://public.aws-2-us-east-1.ingress.vtex.io/storecomponents/guilherme/_v/graphql?query=query%20%7B%20product(slug:%20%22egeo-desodorante-colonia-bomb-black-90ml_73530%22)%20%7B%20productId%20productName%20%7D%20%7D'
+Time taken for tests:   12.229 seconds
+p50 1175
+p99 1516
+
+
+// store-graphql with minimal schema
+ab -n 500 -c 50 -H 'Host: store-graphql.vtex.aws-us-east-1.vtex.io' -H 'Authorization: {{token}}' 'http://public.aws-2-us-east-1.ingress.vtex.io/storecomponents/guilherme/_v/graphql?query=query%20%7B%20product(slug:%20%22egeo-desodorante-colonia-bomb-black-90ml_73530%22)%20%7B%20productId%20productName%20%7D%20%7D'
+Time taken for tests:   4.290 seconds
+p50 354
+p99 470
+
+
+// store-graphql with 999 artificial types
+ab -n 500 -c 50 -H 'Host: store-graphql.vtex.aws-us-east-1.vtex.io' -H 'Authorization: {{token}}' 'http://public.aws-2-us-east-1.ingress.vtex.io/storecomponents/guilherme/_v/graphql?query=query%20%7B%20product(slug:%20%22egeo-desodorante-colonia-bomb-black-90ml_73530%22)%20%7B%20productId%20productName%20%7D%20%7D'
+Time taken for tests:   24.013 seconds
+p50 2366
+p99 3231

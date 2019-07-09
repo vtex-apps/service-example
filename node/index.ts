@@ -1,5 +1,7 @@
 import { Service } from '@vtex/api'
 
+console.log(process.env)
+
 export default new Service({
   graphql: {
     resolvers: {
