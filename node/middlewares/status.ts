@@ -1,4 +1,4 @@
-export const status = async (ctx: Context, next: () => Promise<any>) => {
+export async function status(ctx: Context, next: () => Promise<any>) {
   const {state: {code}, clients: {status: statusClient}} = ctx
   console.log('Received code:', code)
 
