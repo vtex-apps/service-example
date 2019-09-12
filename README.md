@@ -4,6 +4,14 @@ A reference app implementing a VTEX IO service with http route handlers.
 
 Start from `node/index.ts` and follow the comments and imports. :)
 
+## Testing
+
+You should have installed `@vtex/test-tools` on your `node` package as `devDependencies`.
+
+Run `vtex test` and [Jest](https://jestjs.io/) will do its thing.
+
+You can check the `node/__tests__/simple.test.ts` case and also Jest Documentation.
+
 ## Splunk Dashboard
 
 We have an (for now, VTEX-only, internal) Splunk dashboard to show all metrics related to your app. You can find it at:
