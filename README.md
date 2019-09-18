@@ -4,11 +4,17 @@ A reference app implementing a VTEX IO service with http route handlers.
 
 Start from `node/index.ts` and follow the comments and imports. :)
 
+## Testing
+
+`@vtex/test-tools` and `@types/jest` should be installed on `./node` package as `devDependencies`.
+
+Run `vtex test` and [Jest](https://jestjs.io/) will do its thing.
+
+Check the `node/__tests__/simple.test.ts` test case and also [Jest's Documentation](https://jestjs.io/docs/en/getting-started).
+
 ## Splunk Dashboard
 
-We have an (for now, VTEX-only, internal) Splunk dashboard to show all metrics related to your app. You can find it at:
-
-https://splunk7.vtex.com/en-US/app/vtex_colossus/node_app_metrics
+We have an (for now, VTEX-only, internal) Splunk dashboard to show all metrics related to your app. You can find it [here](https://splunk7.vtex.com/en-US/app/vtex_colossus/node_app_metrics).
 
 After linking this app and making some requests, you can select `vtex.service-example` and see the metrics for your app. **Don't forget to check the box Development, as you are linking your app in a development workspace**.
 

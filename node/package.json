@@ -3,12 +3,14 @@
     "ramda": "^0.25.0"
   },
   "devDependencies": {
+    "@vtex/test-tools": "^1.0.0",
+    "@types/jest": "^24.0.18",
     "@types/node": "8.x",
     "@types/ramda": "types/npm-ramda#dist",
     "@vtex/api": "3.8.1",
     "tslint": "^5.14.0",
     "tslint-config-vtex": "^2.1.0",
-    "typescript": "^3.1.6"
+    "typescript": "3.5.2"
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty && tslint -c tslint.json --fix './**/*.ts'"

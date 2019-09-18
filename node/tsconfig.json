@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node"],
+    "types": ["node", "jest"],
     "typeRoots": ["node_modules/@types"],
     "target": "es2017",
     "module": "commonjs",
