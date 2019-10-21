@@ -1,7 +1,7 @@
 {
-  "name": "service-example",
-  "vendor": "vtex",
-  "version": "0.0.4",
+  "name": "test-unitary-tests2",
+  "vendor": "vtexgame2",
+  "version": "0.0.1",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
