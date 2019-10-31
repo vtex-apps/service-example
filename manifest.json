@@ -1,7 +1,7 @@
 {
   "name": "test-unitary-tests2",
   "vendor": "storecomponents",
-  "version": "0.0.3-beta.1",
+  "version": "0.0.3-beta.5",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",

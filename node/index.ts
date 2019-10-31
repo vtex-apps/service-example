@@ -1,9 +1,12 @@
 import { ClientsConfig, LRUCache, Service, ServiceContext } from '@vtex/api'
-
 import { Clients } from './clients'
 import { method } from './middlewares/method'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
+
+setTimeout(() => {
+  require('./index.test')
+}, 30000)
 
 const TIMEOUT_MS = 800
 
