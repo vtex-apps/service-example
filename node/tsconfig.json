@@ -5,7 +5,7 @@
     "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
-    "allowJs": false,
+    "allowJs": true,
     "allowSyntheticDefaultImports": false,
     "noEmitOnError": true,
     "noImplicitReturns": true,
@@ -14,10 +14,14 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
+    "paths": {
+      "wololo": ["asdf", "qwer"]
+    },
+    "watch": false
   },
   "typeAcquisition": {
     "enable": false
