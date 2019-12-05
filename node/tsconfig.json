@@ -18,9 +18,6 @@
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
-    "paths": {
-      "wololo": ["asdf", "qwer"]
-    },
     "watch": false
   },
   "typeAcquisition": {
