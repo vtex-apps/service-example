@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "pkg-a": "file:../pkg-a",
-    "pkg-b": "file:../pkg-b",
+    "@tiagonapoli/test-pkg-a": "^0.0.1",
+    "@tiagonapoli/test-pkg-b": "^0.0.1",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
