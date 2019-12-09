@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "pkg-a": "file:../pkg-a",
+    "pkg-b": "file:../pkg-b",
     "ramda": "^0.25.0"
   },
   "devDependencies": {

@@ -4,10 +4,6 @@ import { method } from './middlewares/method'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
 
-setTimeout(() => {
-  require('./index.test')
-}, 30000)
-
 const TIMEOUT_MS = 800
 
 // Create a LRU memory cache for the Status client.
