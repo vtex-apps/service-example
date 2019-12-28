@@ -6,6 +6,8 @@
   },
   "devDependencies": {
     "@types/node": "12.x",
-    "typescript": "3.7.3"
+    "typescript": "3.7.3",
+    "@types/jest": "^24.0.25",
+    "@vtex/test-tools": "^3.0.0"
   }
 }
