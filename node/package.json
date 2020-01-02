@@ -14,5 +14,6 @@
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty && tslint -c tslint.json --fix './**/*.ts'"
-  }
+  },
+  "version": "0.0.15"
 }
