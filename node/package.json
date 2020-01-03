@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@tiagonapoli/test-pkg-a": "^0.0.1",
+    "@tiagonapoli/test-pkg-b": "^0.0.1",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
