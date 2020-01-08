@@ -10,9 +10,6 @@
   "builders": {
     "node": "4.x"
   },
-  "scripts": {
-    "prereleasy": "bash lint.sh"
-  },
   "credentialType": "absolute",
   "policies": [
     {
