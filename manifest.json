@@ -1,6 +1,6 @@
 {
   "name": "test-linked-modules",
-  "vendor": "storecomponents",
+  "vendor": "vtex",
   "version": "0.0.10-beta.0",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
