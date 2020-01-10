@@ -6,7 +6,7 @@ A reference app implementing a VTEX IO service with HTTP route handlers.
 
 We use [**KoaJS**](https://koajs.com/) as the web framework, so you might want to get into that
 
-We also use the [**node-vtex-api**](https://github.com/vtex/node-vtex-api) set of utilities for Node services. You can import this package using NPM from `@vtex/api` (already imported on this project)
+We also use the [**node-vtex-api**](https://github.com/vtex/node-vtex-api), a VTEX set of utilities for Node services. You can import this package using NPM from `@vtex/api` (already imported on this project)
 
 - Start from `node/index.ts` and follow the comments and imports :)
 
