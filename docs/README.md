@@ -46,6 +46,22 @@ For `?accepting=query-string`, you **don't need to declare anything**, as any qu
 #### HTTP methods
 When you define a route on the `service.json`, your NodeJS handler for that route will be triggered  **on every HTTP method** (GET, POST, PUT...), so, if you need to handle them separately you need to implement the "sub-router". Since you can **define an array of handlers** to each route, a simple pattern to accomplish this is, like, `status: [validate, statusGet, statusPost]`, where a function that only deals with GET request should just call `next()`.
 
+Another way of routing to different HTTP methods is using the helper function `method` exported from `@vtex/api`. Instead of passing your handlers directly to the corresponding route on `index.ts`, you pass a `method` call passing **an object with the desired method as key and one handler as its corresponding value**. Check this example:
+```typescript
+import { method } from '@vtex/api'
+...
+
+export default new Service<Clients, State>({
+  clients,
+  routes: {
+    status: method({
+      GET: statusGetHandler,
+      POST: statusPostHandler,
+    }),
+  },
+})
+```
+
 ### Throwing errors
 
 When building a HTTP service, we should follow HTTP rules regarding data types, cache, authorization, and status code. Our example app sets a `ctx.status` value that will be used as a HTTP status code return value, but often we also want to give proper information about errors as well.
