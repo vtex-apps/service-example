@@ -44,9 +44,7 @@ Another way of controlling access to specific routes is using **ReBACs (Resource
 For `?accepting=query-string`, you **don't need to declare anything**, as any query provided to the URL will already be available for you to use on the code as `ctx.query`, already parsed as an object, or `ctx.queryString`, taken directly from the URL as a string.
 
 #### HTTP methods
-When you define a route on the `service.json`, your NodeJS handler for that route will be triggered  **on every HTTP method** (GET, POST, PUT...), so, if you need to handle them separately you need to implement the "sub-router". Since you can **define an array of handlers** to each route, a simple pattern to accomplish this is, like, `status: [validate, statusGet, statusPost]`, where a function that only deals with GET request should just call `next()`.
-
-Another way of routing to different HTTP methods is using the helper function `method` exported from `@vtex/api`. Instead of passing your handlers directly to the corresponding route on `index.ts`, you pass a `method` call passing **an object with the desired method as key and one handler as its corresponding value**. Check this example:
+When you define a route on the `service.json`, your NodeJS handlers for that route will be triggered  **on every HTTP method** (GET, POST, PUT...), so, if you need to handle them separately you need to implement a "sub-router". Fortunately, the _node-vtex-api_ provides a helper function `method`, exported from `@vtex/api`, to accomplish that behaviour. Instead of passing your handlers directly to the corresponding route on `index.ts`, you pass a `method` call passing **an object with the desired method as key and one handler as its corresponding value**. Check this example:
 ```typescript
 import { method } from '@vtex/api'
 ...
