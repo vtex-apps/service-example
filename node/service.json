@@ -5,9 +5,15 @@
   "minReplicas": 2,
   "maxReplicas": 4,
   "routes": {
+    "configuration": {
+      "path": "/_v/configuration",
+      "public": true,
+      "settingsType": "workspace"
+    },
     "status": {
       "path": "/_v/status/:code",
-      "public": true
+      "public": true,
+      "settingsType": "workspace"
     }
   }
 }

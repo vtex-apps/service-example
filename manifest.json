@@ -8,8 +8,9 @@
   "categories": [],
   "dependencies": {},
   "builders": {
-    "node": "4.x",
-    "docs": "0.x"
+    "node": "6.x",
+    "docs": "0.x",
+    "configuration": "0.x"
   },
   "scripts": {
     "prereleasy": "bash lint.sh"
