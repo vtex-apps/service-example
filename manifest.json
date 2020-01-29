@@ -1,5 +1,5 @@
 {
-  "name": "service-example",
+  "name": "service-example-slack-notification-test",
   "vendor": "vtex",
   "version": "0.0.5",
   "title": "Service Example",
