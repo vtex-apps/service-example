@@ -1,7 +1,7 @@
 {
-  "name": "service-example-slack-notification-test-adslfjkas",
+  "name": "service-example-slack-notification-testg",
   "vendor": "vtex",
-  "version": "0.0.7-beta.0",
+  "version": "0.0.7-beta.1",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",

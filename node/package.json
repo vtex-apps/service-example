@@ -5,9 +5,9 @@
   "devDependencies": {
     "@vtex/test-tools": "^1.0.0",
     "@types/jest": "^24.0.18",
-    "@types/node": "8.x",
+    "@types/node": "^12.0.0",
     "@types/ramda": "types/npm-ramda#dist",
-    "@vtex/api": "^6.0.0",
+    "@vtex/api": "6.13.0",
     "tslint": "^5.14.0",
     "tslint-config-vtex": "^2.1.0",
     "typescript": "3.7.3"
