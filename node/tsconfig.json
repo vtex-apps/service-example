@@ -1,12 +1,17 @@
 {
   "compilerOptions": {
     "types": ["node", "jest"],
+    "lib": [
+      "ES2019",
+      "ESNext"
+    ],
     "typeRoots": ["node_modules/@types"],
-    "target": "es2017",
+    "target": "ES2019",
     "module": "commonjs",
     "moduleResolution": "node",
     "allowJs": false,
-    "allowSyntheticDefaultImports": false,
+    "checkJs": false,
+    "esModuleInterop": true,
     "noEmitOnError": false,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -22,6 +27,6 @@
   "typeAcquisition": {
     "enable": false
   },
-  "include": ["global.ts", "./**/*"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }
