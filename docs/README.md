@@ -4,6 +4,8 @@
 
 A reference app implementing a VTEX IO service with HTTP route handlers.
 
+![Service Example Architecture](https://user-images.githubusercontent.com/18706156/77381360-72489680-6d5c-11ea-9da8-f4f03b6c5f4c.jpg)
+
 We use [**KoaJS**](https://koajs.com/) as the web framework, so you might want to get into that
 
 We also use the [**node-vtex-api**](https://github.com/vtex/node-vtex-api), a VTEX set of utilities for Node services. You can import this package using NPM from `@vtex/api` (already imported on this project)
@@ -70,7 +72,7 @@ The **node-vtex-api** already exports a handful of **custom error classes** that
 import { UserInputError } from '@vtex/api'
 
 export async function validate(ctx: Context, next: () => Promise<any>) {
-  const { code } = ctx.vtex.params
+  const { code } = ctx.vtex.route.params
   if (isNaN(code) || code < 100 || code > 600) {
     throw new UserInputError('Code must be a number between 100 and 600')
   }
