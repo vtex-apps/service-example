@@ -8,7 +8,7 @@
     "@types/jest": "^24.0.18",
     "@types/node": "^12.0.0",
     "@types/ramda": "types/npm-ramda#dist",
-    "@vtex/api": "6.31.0",
+    "@vtex/api": "6.30.1",
     "@vtex/test-tools": "^1.0.0",
     "tslint": "^5.14.0",
     "tslint-config-vtex": "^2.1.0",

@@ -1236,10 +1236,10 @@
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.0.tgz#8b63ab7f1aa5321248aad5ac890a485656dcea4d"
   integrity sha512-te5lMAWii1uEJ4FwLjzdlbw3+n0FZNOvFXHxQDKeT0dilh7HOzdMzV2TrJVUzq8ep7J4Na8OUYPRLSQkJHAlrg==
 
-"@vtex/api@6.31.0":
-  version "6.31.0"
-  resolved "https://registry.npmjs.org/@vtex/api/-/api-6.31.0.tgz#a9d3112ee8b3cd679ea4920521221894314df9d1"
-  integrity sha512-RX5M3kctGonXqpVLZSFg2p2xJpFgKaoIYJr9v6gHv8Wi99mZv1ukuFN/MxTB1MDdB5LeMLfVMGtYCB8svMrC6w==
+"@vtex/api@6.30.1":
+  version "6.30.1"
+  resolved "https://registry.npmjs.org/@vtex/api/-/api-6.30.1.tgz#e71ebed6cff6bfdec928535133ffe6d0522797ae"
+  integrity sha512-HfE5Jxii3daU8s3B0FS/5fKeoObkqZkdGBSz8iwWvhYN+nCrvJWm7J0KT5MyGNphp0E3ShxoHQhF46RUG8yXVA==
   dependencies:
     "@types/koa" "^2.11.0"
     "@types/koa-compose" "^3.2.3"
