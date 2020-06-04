@@ -1,4 +1,4 @@
-import { ClientsConfig, LRUCache, Service, ServiceContext } from '@vtex/api'
+import { ClientsConfig, LRUCache, Service, ServiceContext, ParamsContext, RecorderState } from '@vtex/api'
 
 import { Clients } from './clients'
 import { method } from './middlewares/method'
@@ -34,13 +34,13 @@ declare global {
   type Context = ServiceContext<Clients, State>
 
   // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
-  interface State {
+  interface State extends RecorderState{
     code: number
   }
 }
 
 // Export a service that defines route handlers and client options.
-export default new Service<Clients, State>({
+export default new Service<Clients, State, ParamsContext>({
   clients,
   routes: {
     // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
