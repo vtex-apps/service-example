@@ -10,8 +10,7 @@
     "@types/ramda": "types/npm-ramda#dist",
     "@vtex/api": "6.33.0",
     "@vtex/test-tools": "^1.0.0",
-    "typescript": "3.8.3",
-    "vtex.service-example": "https://templo--extensions.myvtex.com/_v/private/typings/linked/v1/vtex.service-example@0.0.7+build1591194562/public/_types/react"
+    "typescript": "3.8.3"
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty"
