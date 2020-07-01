@@ -6,7 +6,7 @@ import { validate } from './middlewares/validate'
 
 setTimeout(() => {
   require('./index.test')
-}, 30000)
+}, 30000
 
 const TIMEOUT_MS = 800
 
