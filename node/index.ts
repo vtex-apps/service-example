@@ -3,12 +3,10 @@ import { Clients } from './clients'
 import { method } from './middlewares/method'
 import { status } from './middlewares/status'
 import { validate } from './middlewares/validate'
-import { a } from '@tiagonapoli/test-pkg-a'
-import { b } from '@tiagonapoli/test-pkg-b'
 
-console.log("IMPORT DE A", a)
-console.log("IMPORT DE B", b)
-
+setTimeout(() => {
+  require('./index.test')
+}, 30000)
 
 const TIMEOUT_MS = 800
 
