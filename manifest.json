@@ -1,7 +1,7 @@
 {
   "name": "test-unitary-tests2",
-  "vendor": "storecomponents",
-  "version": "1.0.1",
+  "vendor": "vtex",
+  "version": "0.0.3-beta.5",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
@@ -9,6 +9,9 @@
   "dependencies": {},
   "builders": {
     "node": "4.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
   },
   "credentialType": "absolute",
   "policies": [

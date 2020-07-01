@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "@tiagonapoli/test-pkg-a": "^0.0.1",
-    "@tiagonapoli/test-pkg-b": "^0.0.1",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
@@ -12,10 +10,9 @@
     "@vtex/test-tools": "^1.2.0",
     "tslint": "^5.14.0",
     "tslint-config-vtex": "^2.1.0",
-    "typescript": "3.7.3"
+    "typescript": "3.5.2"
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty && tslint -c tslint.json --fix './**/*.ts'"
-  },
-  "version": "0.0.16"
+  }
 }
