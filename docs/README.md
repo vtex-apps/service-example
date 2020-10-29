@@ -46,14 +46,8 @@ Another way of controlling access to specific routes is using **ReBACs (Resource
 For `?accepting=query-string`, you **don't need to declare anything**, as any query provided to the URL will already be available for you to use on the code as `ctx.query`, already parsed as an object, or `ctx.queryString`, taken directly from the URL as a string.
 
 #### Route Params
-For `/_v/status/:code`, you need to declare the typing of the route param - in the example is declared in __node/index.ts__ as we can see here:
-``` 
-  // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
-  interface State extends RecorderState {
-    code: number
-  }
-``` 
-And they will be available for you to use on the code as `ctx.vtex.params`, already parsed as an object.
+Route Params will be available for you to use on the code as `ctx.vtex.params`, already parsed as an object.
+For a path like `/_v/status/:code`, if you receive the request `/_v/status/200`, `ctx.vtex.params` will return `{ code: '200' }`
 
 #### HTTP methods
 When you define a route on the `service.json`, your NodeJS handlers for that route will be triggered  **on every HTTP method** (GET, POST, PUT...), so, if you need to handle them separately you need to implement a "sub-router". Fortunately, the _node-vtex-api_ provides a helper function `method`, exported from `@vtex/api`, to accomplish that behaviour. Instead of passing your handlers directly to the corresponding route on `index.ts`, you pass a `method` call passing **an object with the desired method as key and one handler as its corresponding value**. Check this example:
