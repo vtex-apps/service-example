@@ -3,18 +3,21 @@ export async function status(ctx: Context, next: () => Promise<any>) {
     state: { code },
     clients: { status: statusClient },
   } = ctx
-  console.log('Received code:', code)
+
+  console.info('Received code:', code)
 
   const statusResponse = await statusClient.getStatus(code)
-  console.log('Status response:', statusResponse)
+
+  console.info('Status response:', statusResponse)
 
   const {
     headers,
     data,
     status: responseStatus,
   } = await statusClient.getStatusWithHeaders(code)
-  console.log('Status headers', headers)
-  console.log('Status data:', data)
+
+  console.info('Status headers', headers)
+  console.info('Status data:', data)
 
   ctx.status = responseStatus
   ctx.body = data
