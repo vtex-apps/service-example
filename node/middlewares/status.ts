@@ -19,8 +19,6 @@ export async function status(ctx: Context, next: () => Promise<any>) {
     })
   console.log('Status response:', statusResponse)
 
-  console.log('Code:', code)
-
   const {
     headers,
     data,
@@ -44,7 +42,7 @@ export async function status(ctx: Context, next: () => Promise<any>) {
 
   ctx.status = responseStatus
   ctx.body = data
-  ctx.set('Cache-Control', 'no-cache')
+  ctx.set('Cache-Control', headers['cache-control'])
 
   await next()
 }
