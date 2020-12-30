@@ -3,8 +3,9 @@ export async function status(ctx: Context, next: () => Promise<any>) {
     state: { code },
     clients: { status: statusClient },
   } = ctx
-  console.log('Received code:', code)
 
+  console.info('Received code:', code)
+  
   const statusResponse = await statusClient.getStatus(code).then(result => result,
     error => {
       if (error.response === undefined) {

@@ -1,11 +1,5 @@
-import {
-  ClientsConfig,
-  LRUCache,
-  method,
-  Service,
-  ServiceContext,
-  RecorderState,
-} from '@vtex/api'
+import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
+import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
 import { status } from './middlewares/status'
