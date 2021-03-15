@@ -3,7 +3,7 @@ import { ExternalClient } from '@vtex/api'
 
 export default class Status extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('http://httpstat.us', context, options)
+    super('https://pokeapi.co/api/v2/pokemon', context, options)
   }
 
   public async getStatus(status: number): Promise<string> {

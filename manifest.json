@@ -24,6 +24,27 @@
       }
     },
     {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "swapi.dev",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "poc-proxyvtex.ergittek.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "pokeapi.co",
+        "path": "*"
+      }
+    },
+    {
       "name": "colossus-fire-event"
     },
     {
