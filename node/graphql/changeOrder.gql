@@ -1,0 +1,7 @@
+mutation changeItemsQuery($orderId: ID!, $data: ChangeItemsInput!){
+  changeItems(orderId: $orderId, data: $data) @context(provider: "vtex.orders-graphql") {
+    date,
+    orderId,
+    receipt
+  }
+}
