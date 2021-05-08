@@ -1,10 +1,12 @@
 import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
-
 import { Clients } from './clients'
 import { getOrder } from './middlewares/getOrder'
 import { changeOrder } from './middlewares/changeOrder'
 import { validate } from './middlewares/validate'
+import { getMasterdataInfo } from './middlewares/getMasterdataInfo'
+import { verifyAddress } from './middlewares/verifyAddress'
+
 
 const TIMEOUT_MS = 800
 
@@ -25,7 +27,7 @@ const clients: ClientsConfig<Clients> = {
       timeout: TIMEOUT_MS,
     },
     // This key will be merged with the default options and add this cache to our Status client.
-    status: {
+    unigis: {
       memoryCache,
     },
   },
@@ -37,7 +39,8 @@ declare global {
 
   // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
   interface State extends RecorderState {
-    code: String
+    code: String,
+    addressName: String
   }
 }
 
@@ -52,6 +55,9 @@ export default new Service({
     postOrder: method({
       POST: [validate, changeOrder],
     }),
+    verifySecureAddress: method({
+      POST: [ getMasterdataInfo, verifyAddress ]
+    })
   },
 })
 

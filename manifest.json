@@ -26,7 +26,45 @@
       }
     },
     {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "serv-11.carrefour.com.ar",
+        "path": "/*"
+      }
+    },
+    {
       "name": "OMSViewer"
+    },
+    {
+      "name": "1_dataentity_view"
+    },
+    {
+      "name": "2_dataentity_view"
+    },
+    {
+      "name": "1_dataentity_list"
+    },
+    {
+      "name": "2_dataentity_list"
+    },
+    {
+      "name": "1_dataentity_edit"
+    },
+    {
+      "name": "2_dataentity_edit"
+    },
+    {
+      "name": "POWER_USER_DS"
+    },
+    {
+      "name": "AdminPortal"
     },
     {
       "name": "colossus-fire-event"

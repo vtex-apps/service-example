@@ -13,6 +13,10 @@
     "postOrder": {
       "path": "/v0/order/:code/changes",
       "public": true
+    },
+    "verifySecureAddress": {
+      "path": "/v0/verifyaddress/:addressName",
+      "public": true
     }
   }
 }
