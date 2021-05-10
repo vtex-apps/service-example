@@ -6,9 +6,7 @@
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
-  "dependencies": {
-    "vtex.orders-graphql": "0.x"
-  },
+  "dependencies": {},
   "builders": {
     "node": "6.x",
     "docs": "0.x"
@@ -21,12 +19,9 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "portal.vtexcommercestable.com.br",
-        "path": "/api/oms/*"
+        "host": "httpstat.us",
+        "path": "*"
       }
-    },
-    {
-      "name": "OMSViewer"
     },
     {
       "name": "colossus-fire-event"
