@@ -130,3 +130,4 @@ For convenience, the link for the current version: https://splunk7.vtex.com/en-U
 **Upcoming documentation:**
 
  - [Bump y18n from 4.0.0 to 4.0.3 in /node](https://github.com/vtex-apps/service-example/pull/40)
+ - [Bump handlebars from 4.2.0 to 4.7.7 in /node](https://github.com/vtex-apps/service-example/pull/42)
