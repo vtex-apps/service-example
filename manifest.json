@@ -1,7 +1,7 @@
 {
   "name": "service-example",
   "vendor": "vtex",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
