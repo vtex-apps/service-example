@@ -125,3 +125,8 @@ We have an (for now, VTEX-only, internal) Splunk dashboard to show all metrics r
 After linking this app and making some requests, you can select `vtex.service-example` and see the metrics for your app. **Don't forget to check the box Development, as you are linking your app in a development workspace**.
 
 For convenience, the link for the current version: https://splunk7.vtex.com/en-US/app/vtex_colossus/node_app_metrics?form.time.earliest=-30m%40m&form.time.latest=%40m&form.picked_context=false&form.picked_region=aws-us-east-*&form.picked_service=vtex.service-example
+
+
+**Upcoming documentation:**
+
+ - [Bump y18n from 4.0.0 to 4.0.3 in /node](https://github.com/vtex-apps/service-example/pull/40)
