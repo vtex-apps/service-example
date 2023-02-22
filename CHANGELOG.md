@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Add `resolutions` section to `node/package.json` to eliminate node incompatibility errors
+
 ## [0.2.20] - 2023-01-10
 
 ## [0.2.19] - 2023-01-10
@@ -46,24 +50,33 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.2.2] - 2023-01-10
 
 ## [0.2.1] - 2023-01-10
+
 ### Changed
+
 - Setup current linter and prettier presets.
 
 ## [0.2.0] - 2020-10-29
-### Changed 
+
+### Changed
+
 - Update documentation to include Route Params.
 
 ## [0.1.1] - 2020-06-26
+
 ### Changed
+
 - Adding Github Actions and using vtex/typescript settings.
 
 ## [0.1.0] - 2020-06-08
+
 ### Changed
+
 - Update to node builder `6.x`
 
 ## [0.0.7] - 2020-03-24
 
 ## [0.0.6] - 2020-01-11
+
 - Improving the documentation and adding more examples on the handlers.
 
 ## [0.0.5] - 2019-11-18
@@ -75,9 +88,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [0.0.2] - 2019-04-26
 
 ### Changed
+
 - Using new IOClient
 
 ## [0.0.1] - 2019-03-29
 
 ### Added
+
 - Initial example
