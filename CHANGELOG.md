@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.21] - 2023-02-24
+
 ### Fixed
 
 - Add `resolutions` section to `node/package.json` to eliminate node incompatibility errors
