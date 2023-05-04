@@ -19,4 +19,14 @@ export default class Status extends ExternalClient {
       metric: 'status-get-raw',
     })
   }
+
+  public async getStatusAndForceMaxAge(
+    status: number
+  ): Promise<IOResponse<string>> {
+    return this.http.get(status.toString(), {
+      // when using an LRUCache, this will force the response to be cached
+      forceMaxAge: 5000,
+      metric: 'status-get-forceMaxAge',
+    })
+  }
 }
