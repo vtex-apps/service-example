@@ -8,6 +8,9 @@
   "categories": [],
   "dependencies": {},
   "builders": {
+    "react": "3.x",
+    "store": "0.x",
+    "pixel": "0.x",
     "node": "6.x",
     "docs": "0.x"
   },
@@ -30,5 +33,31 @@
       "name": "colossus-write-logs"
     }
   ],
+  "settingsSchema": {
+    "title": "Truefit Integration",
+    "type": "object",
+    "properties": {
+      "apiKey": {
+        "title": "API Key",
+        "description": "Enter the API Key",
+        "type": "string"
+      },
+      "apiToken": {
+        "title": "API Token",
+        "description": "Enter the API token",
+        "type": "string"
+      },
+      "clientId": {
+        "title": "Client Id",
+        "description": "Enter the Client Id",
+        "type": "string"
+      },
+      "serverType": {
+        "title": "Server Type ",
+        "description": "Server Type should be staging or prod",
+        "type": "string"
+      }
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
