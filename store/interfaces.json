@@ -1,5 +1,8 @@
 {
   "pixel.trueFit": {
     "component": "index"
+  },
+  "true-fit":{
+    "component": "TrueFit"
   }
 }
