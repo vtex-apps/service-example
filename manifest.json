@@ -1,38 +1,24 @@
 {
-  "name": "service-example",
-  "vendor": "vtex",
-  "version": "0.2.22",
-  "title": "Service Example",
-  "description": "Reference app for VTEX IO Services",
-  "mustUpdateAt": "2018-01-04",
-  "categories": [],
-  "dependencies": {},
+  "name": "wwg-truefit",
+  "vendor": "worldwidegolfqa",
+  "version": "0.0.1",
+  "title": "Truefit Integration",
+  "description": "Truefit Integration",
   "builders": {
     "react": "3.x",
     "store": "0.x",
     "pixel": "0.x",
-    "node": "6.x",
-    "docs": "0.x"
+    "docs": "0.x",
+    "node": "6.x"
   },
-  "scripts": {
-    "prereleasy": "bash lint.sh"
+  "dependencies": {
+    "vtex.pixel-interfaces": "1.x",
+    "vtex.product-summary-context": "0.x",
+    "vtex.my-account": "1.x",
+    "vtex.my-account-commons": "1.x",
+    "vtex.apps-graphql": "2.x",
+    "vtex.product-context": "0.x"
   },
-  "credentialType": "absolute",
-  "policies": [
-    {
-      "name": "outbound-access",
-      "attrs": {
-        "host": "httpstat.us",
-        "path": "*"
-      }
-    },
-    {
-      "name": "colossus-fire-event"
-    },
-    {
-      "name": "colossus-write-logs"
-    }
-  ],
   "settingsSchema": {
     "title": "Truefit Integration",
     "type": "object",

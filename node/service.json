@@ -1,13 +1,13 @@
 {
   "memory": 256,
   "ttl": 10,
-  "timeout": 2,
+  "timeout": 20,
   "minReplicas": 2,
   "maxReplicas": 4,
   "workers": 1,
   "routes": {
-    "status": {
-      "path": "/_v/status/:code",
+    "powerReview": {
+      "path": "/v0/trueFit",
       "public": true
     }
   }

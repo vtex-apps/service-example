@@ -2,24 +2,19 @@ import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { status } from './middlewares/status'
-import { validate } from './middlewares/validate'
+import { trueFit } from './middlewares/trueFit'
 
-const TIMEOUT_MS = 800
+const TIMEOUT_MS = 1000
 
-// Create a LRU memory cache for the Status client.
-// The 'max' parameter sets the size of the cache.
+// Create a LRU memory cache for the turnToXML client.
 // The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
-// Note that the response from the API being called must include an 'etag' header
-// or a 'cache-control' header with a 'max-age' value. If neither exist, the response will not be cached.
-// To force responses to be cached, consider adding the `forceMaxAge` option to your client methods.
 const memoryCache = new LRUCache<string, any>({ max: 5000 })
 
-metrics.trackCache('status', memoryCache)
+metrics.trackCache('trueFit', memoryCache)
 
 // This is the configuration for clients available in `ctx.clients`.
 const clients: ClientsConfig<Clients> = {
-  // We pass our custom implementation of the clients bag, containing the Status client.
+  // We pass our custom implementation of the clients bag, containing the turnToXML client.
   implementation: Clients,
   options: {
     // All IO Clients will be initialized with these options, unless otherwise specified.
@@ -27,8 +22,8 @@ const clients: ClientsConfig<Clients> = {
       retries: 2,
       timeout: TIMEOUT_MS,
     },
-    // This key will be merged with the default options and add this cache to our Status client.
-    status: {
+    // This key will be merged with the default options and add this cache to our turnToXML client.
+    trueFit: {
       memoryCache,
     },
   },
@@ -40,7 +35,8 @@ declare global {
 
   // The shape of our State object found in `ctx.state`. This is used as state bag to communicate between middlewares.
   interface State extends RecorderState {
-    code: number
+    siteKey: string,
+    authKey: string
   }
 }
 
@@ -48,9 +44,10 @@ declare global {
 export default new Service({
   clients,
   routes: {
-    // `status` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
-    status: method({
-      GET: [validate, status],
+    // `turnToXML` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
+    // you use these methods GET, POST, PUT and DELETE
+    powerReview: method({
+      GET: [trueFit],
     }),
   },
 })

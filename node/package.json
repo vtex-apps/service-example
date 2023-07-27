@@ -8,18 +8,19 @@
     "@types/jest": "^24.0.18",
     "@types/node": "^12.0.0",
     "@types/ramda": "types/npm-ramda#dist",
-    "@vtex/api": "6.45.15",
+    "@vtex/api": "6.45.19",
     "@vtex/test-tools": "^1.0.0",
     "@vtex/tsconfig": "^0.5.6",
-    "typescript": "3.9.7"
-  },
-  "resolutions": {
-    "@types/testing-library__dom": "6.12.1",
-    "@types/express": "4.16.0",
-    "@types/express-serve-static-core": "4.16.0"
+    "typescript": "3.9.7",
+    "vtex.apps-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.apps-graphql@2.11.4/public/@types/vtex.apps-graphql",
+    "vtex.my-account": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account@1.25.0/public/@types/vtex.my-account",
+    "vtex.my-account-commons": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.my-account-commons@1.7.0/public/@types/vtex.my-account-commons",
+    "vtex.pixel-interfaces": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-interfaces@1.1.1/public/_types/react",
+    "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context",
+    "vtex.product-summary-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary-context@0.9.0/public/@types/vtex.product-summary-context"
   },
   "scripts": {
     "lint": "tsc --noEmit --pretty"
   },
-  "version": "0.2.22"
+  "version": "0.2.0"
 }
