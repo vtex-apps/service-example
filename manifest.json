@@ -45,5 +45,20 @@
       }
     }
   },
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "worldwidegolfqa.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

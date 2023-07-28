@@ -4,7 +4,7 @@ export async function getProductDetails(ctx: Context, next: () => Promise<any>) 
     clients: { trueFit },
     request:{query: {skuIds}}
   } = ctx
-
+  console.log('skuIds',skuIds);
   const data = await trueFit.getProductDetails(skuIds.split(","))
 
   ctx.body = data

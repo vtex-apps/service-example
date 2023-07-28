@@ -4,7 +4,7 @@ export default class powerReview extends ExternalClient {
     private setting: any | boolean = false
   constructor(context: IOContext, options?: InstanceOptions) {
     // here you have to define the API base URL
-    super('/api/catalog_system/pvt/', context, {
+    super(`https://${context.account}.vtexcommercestable.com.br`, context, {
       ...options,
     })
   }
@@ -21,16 +21,17 @@ export default class powerReview extends ExternalClient {
     }
   }
   // API calling method
-  public async getProductDetails(skuIds: any = null){
+  public async getProductDetails(skuIds: any = null): Promise<any>{
+    console.log('skuIds api places',skuIds);
     try {
-      const Promises =  skuIds.map(async (skuId: any) => {
-        return this.http.get(`/stockkeepingunit/${skuId}/specification`,await this.getHeaders())
+     let skuSpecification = skuIds.map(async (skuId: any) => {
+      return this.http.get(`/api/catalog/pvt/stockkeepingunit/${skuId}/specification`,await this.getHeaders())
       })
-
-      let getStore = await Promise.all(Promises)
-      console.log(getStore, "getStore");
-
-      return getStore;
+      const res = await Promise.all(skuSpecification);
+      // skuSpecification.then(function(res:any){
+        console.log('Promises',res);
+        return res;
+      // })
     } catch (error) {
       console.log("error", error);
       return []

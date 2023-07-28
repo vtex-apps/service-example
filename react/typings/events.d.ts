@@ -2,6 +2,7 @@ export interface PixelMessage extends MessageEvent {
     data:
       | OrderPlacedData
       | UserData
+      | OrderPlacedTrackedData
   }
   
   export interface EventData {
@@ -26,7 +27,10 @@ export interface PixelMessage extends MessageEvent {
     event: 'orderPlaced'
     eventName: 'vtex:orderPlaced'
   }
-    
+  export interface OrderPlacedTrackedData extends Order, EventData {
+    event: 'orderPlacedTracked'
+    eventName: 'vtex:orderPlacedTracked'
+  }
   export interface Order {
     accountName: string
     corporateName: string

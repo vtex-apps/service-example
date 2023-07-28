@@ -1,63 +1,64 @@
 import canUseDOM  from 'vtex.render-runtime'
-// import type { PixelMessage } from './typings/events'
 
 declare const window: any
 
 export function handleEvents(e:any) {
-console.log(e);
+console.log(e.data.eventName);
 
-if (e.data.eventName === 'vtex:orderPlaced' ||  e.data.eventName ===  'vtex:orderPlacedTracked') {
+    console.log('ffff');
+    if (e.data.eventName === 'vtex:orderPlaced' ||  e.data.eventName ===  'vtex:orderPlacedTracked') {
+      const skuIds = e.data.transactionProducts.map((product:any) => {
+        return product.sku
+      })
+      console.log('ddddd');
+      (function (r:any, e:any, o:any) {
+        var w = window, d = document,
+          t: any, s, x: any;
+        w.tfcapi = t = w.tfcapi || function () { t.q = t.q || []; t.q.push(arguments); };
+        t('init', { storeKey: r, environment: e, ...o });
+        x = d.getElementsByTagName('script')[0];
+        s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true;
+        s.src = 'https://' + r + '-cdn' + (e === 'dev' || e === 'staging' ? '.' + e : '') + '.truefitcorp.com/fitrec/' + r + '/js/tf-integration.js';
+        x.parentNode.insertBefore(s, x);
+        // Don't change anything above this line
+      })('wgs', 'staging', {autoCalculate:false});
+      
+     
+      console.log(skuIds.toString());
+      fetch("/v0/get-product-details?skuIds="+ skuIds.toString()).then(res => res.json())
+      .then((res) => {
 
-  (function (r, e, o) {
-    var w = window, d = document,
-      t: any, s, x: any;
-    w.tfcapi = t = w.tfcapi || function () { t.q = t.q || []; t.q.push(arguments); };
-    t('init', { storeKey: r, environment: e, ...o });
-    x = d.getElementsByTagName('script')[0];
-    s = d.createElement('script');
-    s.type = 'text/javascript'; s.async = true;
-    s.src = 'https://' + r + '-cdn' + (e === 'dev' || e === 'staging' ? '.' + e : '') + '.truefitcorp.com/fitrec/' + r + '/js/tf-integration.js';
-    x.parentNode.insertBefore(s, x);
-    // Don't change anything above this line
-  })('wgs', 'staging', {autoCalculate:false});
 
-  const skuIds = e.data.transactionProducts.map((product:any) => {
-    return product.sku
-  })
-  fetch("/v0/get-product-details?skuIds="+ skuIds.toString()).then(res => res.json())
-  .then((res) => {
+        console.log(res,"res");
 
+        window.tfcapi('track', 'checkout', {
 
-    console.log(res,"res");
+          userId: 'user-abc',
 
-    window.tfcapi('track', 'checkout', {
+          orderId: 'order-xyz',
 
-      userId: 'user-abc',
+          locale: 'en_US',
 
-      orderId: 'order-xyz',
+          products: [{
 
-      locale: 'en_US',
+            productId: 10128174,
 
-      products: [{
+            colorId: 'navy',
 
-        productId: 10128174,
+            quantity: 1,
 
-        colorId: 'navy',
+            price: "xxx",
 
-        quantity: 1,
+            currency: 'USD',
 
-        price: "xxx",
+            size: '33/34',
 
-        currency: 'USD',
+            sku: '739248185902'
 
-        size: '33/34',
-
-        sku: '739248185902'
-
-    }]});
-  })
-
-}
+        }]});
+      })
+  }
 }
 
 if (canUseDOM) {
