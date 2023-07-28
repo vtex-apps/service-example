@@ -24,7 +24,7 @@ if (e.data.eventName === 'vtex:orderPlaced' ||  e.data.eventName ===  'vtex:orde
   const skuIds = e.data.transactionProducts.map((product:any) => {
     return product.sku
   })
-  fetch("https://wt264--worldwidegolfqa.myvtex.com/v0/get-product-details?skuIds="+ skuIds.toString()).then(res => res.json())
+  fetch("/v0/get-product-details?skuIds="+ skuIds.toString()).then(res => res.json())
   .then((res) => {
 
 

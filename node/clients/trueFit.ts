@@ -27,7 +27,9 @@ export default class powerReview extends ExternalClient {
         return this.http.get(`/stockkeepingunit/${skuId}/specification`,await this.getHeaders())
       })
 
-      let getStore = await Promise.all([Promises])
+      let getStore = await Promise.all(Promises)
+      console.log(getStore, "getStore");
+
       return getStore;
     } catch (error) {
       console.log("error", error);
