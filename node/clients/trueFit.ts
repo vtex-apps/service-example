@@ -28,10 +28,8 @@ export default class powerReview extends ExternalClient {
       return this.http.get(`/api/catalog/pvt/stockkeepingunit/${skuId}/specification`,await this.getHeaders())
       })
       const res = await Promise.all(skuSpecification);
-      // skuSpecification.then(function(res:any){
         console.log('Promises',res);
         return res;
-      // })
     } catch (error) {
       console.log("error", error);
       return []
