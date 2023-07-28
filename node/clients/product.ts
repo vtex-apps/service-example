@@ -1,6 +1,6 @@
 import type { InstanceOptions, IOContext } from '@vtex/api'
 import { ExternalClient, Apps } from '@vtex/api'
-export default class powerReview extends ExternalClient {
+export default class product extends ExternalClient {
     private setting: any | boolean = false
   constructor(context: IOContext, options?: InstanceOptions) {
     // here you have to define the API base URL
@@ -22,14 +22,9 @@ export default class powerReview extends ExternalClient {
   }
   // API calling method
   public async getProductDetails(skuIds: any = null): Promise<any>{
-    console.log('skuIds api places',skuIds);
     try {
-     let skuSpecification = skuIds.map(async (skuId: any) => {
-      return this.http.get(`/api/catalog/pvt/stockkeepingunit/${skuId}/specification`,await this.getHeaders())
-      })
-      const res = await Promise.all(skuSpecification);
-        console.log('Promises',res);
-        return res;
+     const skuSpecifications = skuIds.map(async (skuId: any) => (this.http.get(`/api/catalog/pvt/stockkeepingunit/${skuId}/specification`,await this.getHeaders())))
+        return await Promise.all(skuSpecifications);
     } catch (error) {
       console.log("error", error);
       return []

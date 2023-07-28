@@ -2,7 +2,7 @@ import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { getProductDetails } from './middlewares/trueFit'
+import { getProductDetails } from './middlewares/getProductDetails'
 
 const TIMEOUT_MS = 1000
 

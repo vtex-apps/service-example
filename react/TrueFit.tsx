@@ -14,7 +14,6 @@ const TrueFit: StorefrontFunctionComponent<TrueFitPdpProps> = ({
 }) => {
   const productContext = useProduct()
   const productReference  = productContext?.product?.productReference;
-  console.log('productContext',productReference);
 
   React.useEffect(() => {
     let r = 'wgs';
