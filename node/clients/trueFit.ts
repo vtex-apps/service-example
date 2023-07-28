@@ -12,18 +12,26 @@ export default class powerReview extends ExternalClient {
     const app = new Apps(this.context)
     // fetch the API key and Token from admin setting
     this.setting = await app.getAppSettings(process.env.VTEX_APP_ID ?? '')
-
     return {
       headers: {
         'Content-type': 'application/json',
         'X-VTEX-API-AppKey': this.setting?.apiKey,
-        'X-VTEX-API-AppToken': this.setting?.appToken,
+        'X-VTEX-API-AppToken': this.setting?.apiToken,
       },
     }
   }
   // API calling method
-  public async trueFit(refID: any = null){
-    let getStore = await this.http.get(`products/productgetbyrefid/${refID}`,await this.getHeaders())
-    return getStore;
+  public async getProductDetails(skuIds: any = null){
+    try {
+      const Promises =  skuIds.map(async (skuId: any) => {
+        return this.http.get(`/stockkeepingunit/${skuId}/specification`,await this.getHeaders())
+      })
+
+      let getStore = await Promise.all([Promises])
+      return getStore;
+    } catch (error) {
+      console.log("error", error);
+      return []
+    }
   }
 }

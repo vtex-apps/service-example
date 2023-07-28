@@ -2,7 +2,7 @@ import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { trueFit } from './middlewares/trueFit'
+import { getProductDetails } from './middlewares/trueFit'
 
 const TIMEOUT_MS = 1000
 
@@ -46,8 +46,8 @@ export default new Service({
   routes: {
     // `turnToXML` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
     // you use these methods GET, POST, PUT and DELETE
-    powerReview: method({
-      GET: [trueFit],
+    getProductDetails: method({
+      GET: [getProductDetails],
     }),
   },
 })

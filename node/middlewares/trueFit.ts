@@ -1,10 +1,11 @@
 
-export async function trueFit(ctx: Context, next: () => Promise<any>) {
+export async function getProductDetails(ctx: Context, next: () => Promise<any>) {
   const {
     clients: { trueFit },
+    request:{query: {skuIds}}
   } = ctx
 
-  const data = await trueFit.trueFit()
+  const data = await trueFit.getProductDetails(skuIds.split(","))
 
   ctx.body = data
 
