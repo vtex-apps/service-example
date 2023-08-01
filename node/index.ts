@@ -4,7 +4,7 @@ import { LRUCache, method, Service } from '@vtex/api'
 import { Clients } from './clients'
 import { skuSpecifications } from './middlewares/skuSpecifications'
 
-const TIMEOUT_MS = 1000
+const TIMEOUT_MS = 3000
 
 // Create a LRU memory cache for the turnToXML client.
 // The @vtex/api HttpClient respects Cache-Control headers and uses the provided cache.
@@ -16,7 +16,12 @@ metrics.trackCache('trueFit', memoryCache)
 const clients: ClientsConfig<Clients> = {
   // We pass our custom implementation of the clients bag, containing the turnToXML client.
   implementation: Clients,
-  options: {skuSpecifications
+  options: {
+    // All IO Clients will be initialized with these options, unless otherwise specified.
+    default: {
+      retries: 2,
+      timeout: TIMEOUT_MS,
+    },
     // This key will be merged with the default options and add this cache to our turnToXML client.
     trueFit: {
       memoryCache,
@@ -24,7 +29,7 @@ const clients: ClientsConfig<Clients> = {
   },
 }
 
-declare global {skuSpecifications
+declare global {
   // We declare a global Context type just to avoid re-writing ServiceContext<Clients, State> in every handler and resolver
   type Context = ServiceContext<Clients, State>
 
