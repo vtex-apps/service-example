@@ -1,6 +1,6 @@
 {
-  "name": "wwg-truefit",
-  "vendor": "worldwidegolfqa",
+  "name": "wwg-truefit-prod",
+  "vendor": "worldwidegolf",
   "version": "0.0.1",
   "title": "Truefit Integration",
   "description": "Truefit Integration",
@@ -49,7 +49,7 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "worldwidegolfqa.vtexcommercestable.com.br",
+        "host": "worldwidegolf.vtexcommercestable.com.br",
         "path": "/api/*"
       }
     },
