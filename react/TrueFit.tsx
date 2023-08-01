@@ -8,7 +8,7 @@ declare global {
     tfcapi: any
   }
 }
-
+// this component loads true-fit widget
 const TrueFit: StorefrontFunctionComponent<TrueFitPdpProps> = ({
   active = true,
 }) => {
@@ -16,8 +16,11 @@ const TrueFit: StorefrontFunctionComponent<TrueFitPdpProps> = ({
   const productReference  = productContext?.product?.productReference;
 
   React.useEffect(() => {
-    let r = 'wgs';
-    let e = 'staging';
+    const {clientID = 'wgs', serverType ='staging'} = JSON.parse(
+      window.sessionStorage.getItem('truefitSession') || '{}'
+    )
+    let r = clientID;
+    let e = serverType;
     let o = { autoCalculate: false };
     (function (r, e, o) {
       var w = window,

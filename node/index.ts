@@ -2,7 +2,7 @@ import type { ClientsConfig, ServiceContext, RecorderState } from '@vtex/api'
 import { LRUCache, method, Service } from '@vtex/api'
 
 import { Clients } from './clients'
-import { getProductDetails } from './middlewares/getProductDetails'
+import { skuSpecifications } from './middlewares/skuSpecifications'
 
 const TIMEOUT_MS = 1000
 
@@ -16,12 +16,7 @@ metrics.trackCache('trueFit', memoryCache)
 const clients: ClientsConfig<Clients> = {
   // We pass our custom implementation of the clients bag, containing the turnToXML client.
   implementation: Clients,
-  options: {
-    // All IO Clients will be initialized with these options, unless otherwise specified.
-    default: {
-      retries: 2,
-      timeout: TIMEOUT_MS,
-    },
+  options: {skuSpecifications
     // This key will be merged with the default options and add this cache to our turnToXML client.
     trueFit: {
       memoryCache,
@@ -29,7 +24,7 @@ const clients: ClientsConfig<Clients> = {
   },
 }
 
-declare global {
+declare global {skuSpecifications
   // We declare a global Context type just to avoid re-writing ServiceContext<Clients, State> in every handler and resolver
   type Context = ServiceContext<Clients, State>
 
@@ -46,8 +41,8 @@ export default new Service({
   routes: {
     // `turnToXML` is the route ID from service.json. It maps to an array of middlewares (or a single handler).
     // you use these methods GET, POST, PUT and DELETE
-    getProductDetails: method({
-      GET: [getProductDetails],
+    skuSpecifications: method({
+      GET: [skuSpecifications],
     }),
   },
 })

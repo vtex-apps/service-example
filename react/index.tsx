@@ -7,6 +7,9 @@ const colorIds = [613];
 const sizeIds = [619, 623]
 
 export function handleEvents(e: any) {
+  const {clientID = 'wgs', serverType ='staging'} = JSON.parse(
+    window.sessionStorage.getItem('truefitSession') || '{}'
+  )
 
   if (e.data.eventName === 'vtex:orderPlaced' || e.data.eventName === 'vtex:orderPlacedTracked') {
     (function (r: any, e: any, o: any) {
@@ -29,7 +32,7 @@ export function handleEvents(e: any) {
       s.src = 'https://' + r + '-cdn' + (e === 'dev' || e === 'staging' ? '.' + e : '') + '.truefitcorp.com/fitrec/' + r + '/js/tf-integration.js';
       x.parentNode.insertBefore(s, x);
       // Don't change anything above this line
-    })('wgs', 'staging', {autoCalculate: false});
+    })(clientID, serverType, {autoCalculate: false});
 
     const products = e.data.transactionProducts.filter((item: any) => {
       let categoryIdObject :any = {}
@@ -42,7 +45,7 @@ export function handleEvents(e: any) {
     });
     const skuIds = products.map((product: any) => product.sku).toString();
     if(skuIds.length){
-      fetch("/v0/get-product-details?skuIds=" + skuIds).then(res => res.json())
+      fetch("/v0/skuSpecifications?skuIds=" + skuIds).then(res => res.json())
       .then((skuSpecifications) => {
         const skuItems = skuSpecifications.map((item: any) => ({
           color: item.find((skuItem: any) => (colorIds.includes(skuItem.FieldId)))?.Text,
