@@ -1,13 +1,13 @@
 {
   "memory": 256,
-  "ttl": 10,
-  "timeout": 2,
+  "ttl": 60,
+  "timeout": 20,
   "minReplicas": 2,
   "maxReplicas": 4,
   "workers": 1,
   "routes": {
-    "status": {
-      "path": "/_v/status/:code",
+    "skuSpecifications": {
+      "path": "/v0/skuSpecifications",
       "public": true
     }
   }

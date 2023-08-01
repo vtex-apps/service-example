@@ -1,10 +1,10 @@
 # In production
 
-- The True Fit libraries should be called on every PDP.
+- The True Fit libraries should be called on every PDP. 
 
-# USE
+# USE 
 
-- Add "worldwidegolfqa.wwg-truefit": "0.x" in manifest.json under dependencies
+- Add "worldwidegolfqa.wwg-truefit": "0.x" in manifest.json under dependencies 
 - in JSONC file add "true-fit"
 
 # wwg-truefit
