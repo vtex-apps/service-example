@@ -4,7 +4,7 @@ declare const window: any
 
 const allowedCategoryIds = ["554","609","610","611","612","559","555","586","670","671","672","589","685"];
 const colorIds = [613];
-const sizeIds = [619, 623]
+const sizeIds = [619, 623, 611]
 
 export function handleEvents(e: any) {
   const {clientID = 'wgs', serverType ='prod'} = JSON.parse(
