@@ -7,7 +7,7 @@ const colorIds = [613];
 const sizeIds = [619, 623]
 
 export function handleEvents(e: any) {
-  const {clientID = 'wgs', serverType ='staging'} = JSON.parse(
+  const {clientID = 'wgs', serverType ='prod'} = JSON.parse(
     window.sessionStorage.getItem('truefitSession') || '{}'
   )
 

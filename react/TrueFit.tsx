@@ -16,7 +16,7 @@ const TrueFit: StorefrontFunctionComponent<TrueFitPdpProps> = ({
   const productReference  = productContext?.product?.productReference;
 
   React.useEffect(() => {
-    const {clientID = 'wgs', serverType ='staging'} = JSON.parse(
+    const {clientID = 'wgs', serverType ='prod'} = JSON.parse(
       window.sessionStorage.getItem('truefitSession') || '{}'
     )
     let r = clientID;
