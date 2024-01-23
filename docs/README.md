@@ -117,18 +117,3 @@ We use Node services across all VTEX, and there are a lot inspiring examples. If
 Run `vtex test` and [Jest](https://jestjs.io/) will do its thing.
 
 Check the `node/__tests__/simple.test.ts` test case and also [Jest's Documentation](https://jestjs.io/docs/en/getting-started).
-
-## Splunk Dashboard
-
-We have an (for now, VTEX-only, internal) Splunk dashboard to show all metrics related to your app. You can find it [here](https://splunk7.vtex.com/en-US/app/vtex_colossus/node_app_metrics).
-
-After linking this app and making some requests, you can select `vtex.service-example` and see the metrics for your app. **Don't forget to check the box Development, as you are linking your app in a development workspace**.
-
-For convenience, the link for the current version: https://splunk7.vtex.com/en-US/app/vtex_colossus/node_app_metrics?form.time.earliest=-30m%40m&form.time.latest=%40m&form.picked_context=false&form.picked_region=aws-us-east-*&form.picked_service=vtex.service-example
-
-
-**Upcoming documentation:**
-
- - [Bump y18n from 4.0.0 to 4.0.3 in /node](https://github.com/vtex-apps/service-example/pull/40)
- - [Bump handlebars from 4.2.0 to 4.7.7 in /node](https://github.com/vtex-apps/service-example/pull/42)
- - [Bump json5 from 2.1.0 to 2.2.3 in /node](https://github.com/vtex-apps/service-example/pull/71)
