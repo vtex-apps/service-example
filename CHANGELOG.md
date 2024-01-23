@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.2.23] - 2024-01-23
+
 ### Removed
 
 - Splunk section from README.md
