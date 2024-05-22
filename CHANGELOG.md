@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- `lint.sh`: return to app root folder before running `yarn lint`
+
 ## [0.2.25] - 2024-03-18
 
 ### Added
