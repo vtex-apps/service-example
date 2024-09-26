@@ -1,8 +1,8 @@
 {
-  "name": "service-example",
-  "vendor": "vtex",
-  "version": "0.2.26",
-  "title": "Service Example",
+  "name": "poc-icaro-automacao-vtex-io",
+  "vendor": "smrholding",
+  "version": "0.1.0",
+  "title": "POC Icaro",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
   "categories": [],
@@ -10,6 +10,15 @@
   "builders": {
     "node": "6.x",
     "docs": "0.x"
+  },
+  "billingOptions": {
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://support.vtex.com/hc/requests"
+    },
+    "free": true,
+    "type": "free",
+    "availableCountries": ["*"]
   },
   "scripts": {
     "prereleasy": "bash lint.sh"
