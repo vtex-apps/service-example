@@ -1,7 +1,7 @@
 {
   "name": "poc-icaro-automacao-vtex-io",
   "vendor": "smrholding",
-  "version": "0.1.1-beta.7",
+  "version": "0.1.1-beta.8",
   "title": "POC Icaro",
   "description": "Reference app for VTEX IO Services",
   "mustUpdateAt": "2018-01-04",
