@@ -6073,10 +6073,6 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.service-example@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.service-example@0.2.26/public/_types/react":
-  version "0.0.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.service-example@0.2.26/public/_types/react#fa7a0347e046eab3dd768998fc9252b2c0dd5aef"
-
 w3c-hr-time@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/w3c-hr-time/-/w3c-hr-time-1.0.2.tgz#0a89cdf5cc15822df9c360543676963e0cc308cd"
