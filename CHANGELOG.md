@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Node Builder from 6.x to 7.x 
+- Update `typescript`, `@types/node` and `@vtex/api` packages
+
 ## [0.2.26] - 2024-05-22
 
 ### Fixed
