@@ -1,6 +1,6 @@
 {
   "name": "service-example",
-  "vendor": "vtex",
+  "vendor": "trika",
   "version": "0.3.0",
   "title": "Service Example",
   "description": "Reference app for VTEX IO Services",
@@ -22,6 +22,26 @@
         "host": "httpstat.us",
         "path": "*"
       }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "trika.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.io.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "ADMIN_DS"
+    },
+    {
+      "name": "POWER_USER_DS"
     },
     {
       "name": "colossus-fire-event"
